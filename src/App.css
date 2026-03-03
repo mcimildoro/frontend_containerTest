@@ -6,6 +6,7 @@
 .item_container {
   background: #F7F7F7;
   border: 1px solid #CCCCCC;
+  padding: 0 11px;
 }
 
 .wrapper_container {
@@ -68,13 +69,12 @@
 }
 
 .btn_reset {
- width: 81px;
-height: 49px;
+  width: 81px;
+  height: 49px;
   border-radius: 50px;
   border: 1px solid #324BFF;
   color: #324BFF;
-  opacity: 1;
-  
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,16 +89,15 @@ height: 49px;
 
 .btn_delete {
   width: 124px;
-height: 49px;
+  height: 49px;
   border-radius: 999px;
   border: 1px solid #324BFF;
   color: #324BFF;
-  
+  background: transparent;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.15s;
@@ -114,21 +113,19 @@ height: 49px;
 }
 
 .btn_add {
-
+  width: 138px;
+  height: 49px;
   border-radius: 999px;
   border: none;
   background: #324BFF;
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-
+  font-weight: 500;
   font-size: 16px;
-
-left: 1271px;
-text-align: center;
+  line-height: 22px;
+  text-align: center;
   text-transform: uppercase;
   cursor: pointer;
-  height: 49px;
-  width: 138px;
   transition: background 0.15s;
 }
 
