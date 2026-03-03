@@ -5,15 +5,24 @@ import ItemModal from './Modal/ItemModal'
 
 const INITIAL_ITEMS = ['Item 1', 'Item 2', 'Item 3', 'Item 4']
 
+type Snapshot = { items: string[]; selected: string | null }
+
 export default function ListboxCard() {
   const [items, setItems] = useState(INITIAL_ITEMS)
-  const [selected, setSelected] = useState('Item 2')
+  const [selected, setSelected] = useState<string | null>('Item 2')
   const [inputValue, setInputValue] = useState('')
   const [modalOpen, setModalOpen] = useState(false)
+  const [history, setHistory] = useState<Snapshot[]>([])
 
-  function handleDelete() {
-    if (!selected) return
-    const next = items.filter((i) => i !== selected)
+  function saveSnapshot() {
+    setHistory((prev) => [...prev, { items, selected }])
+  }
+
+  function handleDelete(item?: string) {
+    const target = item ?? selected
+    if (!target) return
+    saveSnapshot()
+    const next = items.filter((i) => i !== target)
     setItems(next)
     setSelected(next[0] ?? null)
   }
@@ -21,6 +30,7 @@ export default function ListboxCard() {
   function handleAdd() {
     const trimmed = inputValue.trim()
     if (!trimmed) return
+    saveSnapshot()
     setItems([...items, trimmed])
     closeModal()
   }
@@ -35,9 +45,14 @@ export default function ListboxCard() {
     setModalOpen(false)
   }
 
-  function handleReset() {
-    setItems(INITIAL_ITEMS)
-    setSelected('Item 2')
+ 
+
+  function handleUndo() {
+    const prev = history[history.length - 1]
+    if (!prev) return
+    setItems(prev.items)
+    setSelected(prev.selected)
+    setHistory((h) => h.slice(0, -1))
   }
 
   return (
@@ -61,6 +76,7 @@ export default function ListboxCard() {
               <div
                 key={item}
                 onClick={() => setSelected(item)}
+                onDoubleClick={() => handleDelete(item)}
                 className={`list_item${selected === item ? ' selected' : ''}`}
               >
                 {item}
@@ -78,10 +94,11 @@ export default function ListboxCard() {
         {/* Actions */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <button onClick={handleReset} className="btn_reset">
+         
+            <button onClick={handleUndo} disabled={history.length === 0} className="btn_reset">
               <CounterClockwiseClockIcon className="w-4 h-4" />
             </button>
-            <button onClick={handleDelete} disabled={!selected} className="btn_delete">
+            <button onClick={() => handleDelete()} disabled={!selected} className="btn_delete">
               Delete
             </button>
           </div>

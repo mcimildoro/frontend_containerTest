@@ -39,7 +39,7 @@ export default function ItemModal({ isOpen, inputValue, onInputChange, onAdd, on
               className="modal_input"
             />
             <div className="modal_actions">
-              <button onClick={onAdd}  className="modal_btn_add">
+              <button onClick={onAdd} disabled={!inputValue.trim()} className="modal_btn_add">
                 Add
               </button>
               <button onClick={onClose} className="modal_btn_cancel">

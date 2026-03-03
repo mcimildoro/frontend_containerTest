@@ -1,6 +1,11 @@
+body {
+  font-family: 'Montserrat';
+
+}
+
 .background_container {
   background: transparent linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%) 0% 0% no-repeat padding-box;
-  font-family: 'Montserrat', sans-serif;
+  
 }
 
 .item_container {
@@ -24,7 +29,7 @@
 }
 
 .card_title {
-  font-family: 'Montserrat', sans-serif;
+  
   font-weight: 500;
   font-size: 40px;
   line-height: 44px;
@@ -34,7 +39,7 @@
 }
 
 .card_body {
-  font-family: 'Montserrat', sans-serif;
+  
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
@@ -51,7 +56,7 @@
   padding: 0 16px;
   cursor: pointer;
   user-select: none;
-  font-family: 'Montserrat', sans-serif;
+  
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
@@ -94,7 +99,7 @@
   border: 1px solid #324BFF;
   color: #324BFF;
   background: transparent;
-  font-family: 'Montserrat', sans-serif;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -119,7 +124,7 @@
   border: none;
   background: #324BFF;
   color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;

@@ -19,7 +19,7 @@
 }
 
 .modal_title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   
   font-size: 18px;
   line-height: 22px;
@@ -30,7 +30,7 @@
 }
 
 .modal_input {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   border: 1px solid #CCCCCC;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   width: 600px;
