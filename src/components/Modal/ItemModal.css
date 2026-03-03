@@ -1,0 +1,124 @@
+.modal_overlay {
+  position: fixed;
+  inset: 0;
+  background: #0000001A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal_box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0px 8px 24px #00000029;
+  padding: 50px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_title {
+  font-family: 'Montserrat', sans-serif;
+  
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+  margin: 0 0 20px 0;
+}
+
+.modal_input {
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  width: 600px;
+  height: 60px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  color: #999999;
+  outline: none;
+  transition: border-color 0.15s;
+  opacity: 1;
+  text-align: left;
+}
+
+.modal_input:focus {
+  border-color: #324BFF;
+}
+
+.modal_input:focus::placeholder {
+  opacity: 0;
+}
+
+.modal_input::placeholder {
+  letter-spacing: 0px;
+color: #999999;
+opacity: 1;
+text-align: left;
+width: 174px;
+height: 22px;
+
+}
+
+.modal_actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+  
+}
+
+.modal_btn_add {
+  width: 138px;
+  height: 49px;
+  background: #324BFF 0% 0% no-repeat padding-box;
+  border: 1px solid #324BFF;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  opacity: 1;
+  cursor: pointer;
+  
+}
+
+.modal_btn_add:hover {
+  background: #2538d4;
+  border-color: #2538d4;
+}
+
+.modal_btn_add:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.modal_btn_cancel {
+    width: 128px;
+height: 49px;
+
+  border-radius: 50px;
+  border: 1px solid #324BFF;
+  background: transparent;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  letter-spacing: 0px;
+  font-size: 16px;
+  color: #324BFF;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 1;
+  
+}
+
+.modal_btn_cancel:hover {
+  background: #eef0ff;
+}

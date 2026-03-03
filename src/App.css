@@ -132,3 +132,9 @@
 .btn_add:hover {
   background: #2538d4;
 }
+
+.btn_add:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
