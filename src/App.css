@@ -1,42 +1,137 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.background_container {
+  background: transparent linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%) 0% 0% no-repeat padding-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.item_container {
+  background: #F7F7F7;
+  border: 1px solid #CCCCCC;
+}
+
+.wrapper_container {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_container {
+  background: #FFFFFF;
+  box-shadow: 0px 5px 12px #0000001F;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.card_title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 44px;
+  color: #333333;
   text-align: center;
+  margin-bottom: 16px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.card_body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 32px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list_item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  transition: background 0.15s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.list_item:hover {
+  background: #eeeeee;
 }
 
-.card {
-  padding: 2em;
+.list_item.selected {
+  background: #324BFF;
+  color: #FFFFFF;
 }
 
-.read-the-docs {
-  color: #888;
+.btn_reset {
+ width: 81px;
+height: 49px;
+  border-radius: 50px;
+  border: 1px solid #324BFF;
+  color: #324BFF;
+  opacity: 1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.btn_reset:hover {
+  background: #eef0ff;
+}
+
+.btn_delete {
+  width: 124px;
+height: 49px;
+  border-radius: 999px;
+  border: 1px solid #324BFF;
+  color: #324BFF;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn_delete:hover {
+  background: #eef0ff;
+}
+
+.btn_delete:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn_add {
+
+  border-radius: 999px;
+  border: none;
+  background: #324BFF;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 16px;
+
+left: 1271px;
+text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 49px;
+  width: 138px;
+  transition: background 0.15s;
+}
+
+.btn_add:hover {
+  background: #2538d4;
 }
