@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 16px;
   z-index: 10;
 }
 
@@ -12,10 +13,22 @@
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0px 8px 24px #00000029;
-  padding: 50px;
-  width: 700px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .modal_overlay {
+    padding: 0;
+  }
+
+  .modal_box {
+    padding: 50px;
+  }
 }
 
 .modal_title {
@@ -33,7 +46,7 @@
   font-family: 'Montserrat';
   border: 1px solid #CCCCCC;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  width: 600px;
+  width: 100%;
   height: 60px;
   padding: 0 20px;
   box-sizing: border-box;

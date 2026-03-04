@@ -56,8 +56,8 @@ export default function ListboxCard() {
   }
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center background_container">
-      <div className="card_container w-[900px]">
+    <div className="background_container">
+      <div className="card_container">
         {/* Header */}
         <h1 className="card_title">
           This is a technical proof
@@ -70,8 +70,8 @@ export default function ListboxCard() {
         </p>
 
         {/* Listbox */}
-        <ScrollArea.Root className="item_container rounded mb-8 h-48 overflow-hidden">
-          <ScrollArea.Viewport className="w-full h-full">
+        <ScrollArea.Root className="item_container">
+          <ScrollArea.Viewport className="scroll_viewport">
             {items.map((item) => (
               <div
                 key={item}
@@ -83,20 +83,16 @@ export default function ListboxCard() {
               </div>
             ))}
           </ScrollArea.Viewport>
-          <ScrollArea.Scrollbar
-            orientation="vertical"
-            className="flex w-2 p-0.5 bg-gray-100"
-          >
-            <ScrollArea.Thumb className="flex-1 bg-gray-300 rounded-full" />
+          <ScrollArea.Scrollbar orientation="vertical" className="scroll_bar">
+            <ScrollArea.Thumb className="scroll_thumb" />
           </ScrollArea.Scrollbar>
         </ScrollArea.Root>
 
         {/* Actions */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-         
+        <div className="card_actions">
+          <div className="card_actions_left">
             <button onClick={handleUndo} disabled={history.length === 0} className="btn_reset">
-              <CounterClockwiseClockIcon className="w-4 h-4" />
+              <CounterClockwiseClockIcon className="btn_icon" />
             </button>
             <button onClick={() => handleDelete()} disabled={!selected} className="btn_delete">
               Delete
